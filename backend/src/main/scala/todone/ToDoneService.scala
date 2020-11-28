@@ -13,7 +13,6 @@ object ToDoneService {
   import org.http4s.dsl.io._
   import org.http4s.circe.CirceEntityEncoder._
   object Description extends QueryParamDecoderMatcher[String]("description")
-
   val service: HttpRoutes[IO] =
     HttpRoutes.of[IO]{
       case POST -> Root / "api" / "task" / IdVar(id) / "close" =>

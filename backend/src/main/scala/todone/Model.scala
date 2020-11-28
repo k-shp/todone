@@ -2,10 +2,10 @@ package todone
 
 import todone.data._
 
-import scala.collection.mutable
+import scala.collection.mutable.LinkedHashMap
 
 object Model {
-  var tasks = mutable.LinkedHashMap(
+  var tasks = LinkedHashMap(
       Id(1) -> Task(
         State.open,
         "Play with the ToDone interface",
